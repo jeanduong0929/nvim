@@ -2,9 +2,6 @@ local keymap = vim.keymap
 
 keymap.set("n", "x", '"_x')
 
--- Quick save
-keymap.set("n", "<space>w", ":w<cr>")
-
 -- Clear highlights
 keymap.set("n", "<space>h", ":noh<cr>")
 

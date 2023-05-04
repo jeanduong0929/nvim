@@ -3,6 +3,15 @@ vim.cmd([[packadd packer.nvim]])
 return require("packer").startup(function(use)
   use("wbthomason/packer.nvim")
 
+  -- landing page
+  use {
+    'goolord/alpha-nvim',
+    requires = { 'nvim-tree/nvim-web-devicons' },
+    config = function()
+      require 'alpha'.setup(require 'alpha.themes.startify'.config)
+    end
+  }
+
   -- telescope
   use({
     "nvim-telescope/telescope.nvim",

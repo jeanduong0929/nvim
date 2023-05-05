@@ -2,6 +2,7 @@ require("jean.packer")
 require("jean.settings")
 require("jean.keymaps")
 
+require("jean.plugins.alpha")
 require("jean.plugins.theme")
 require("jean.plugins.lualine")
 require("jean.plugins.treesitter")

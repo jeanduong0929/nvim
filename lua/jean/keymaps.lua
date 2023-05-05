@@ -24,8 +24,10 @@ keymap.set("n", "db", "v%")
 -- Delete a line without registering
 keymap.set("n", "D", '"_dd')
 
--- Yank to clipboard
-keymap.set("v", "y", ":y+<CR>")
+-- Yank line to clipboard
+keymap.set("v", "Y", ":y+<CR>")
+-- Yank highlighted to clipboard
+keymap.set("v", "y", '"+y')
 
 -- Go to beginning/end of line
 keymap.set("n", "E", "$")

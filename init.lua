@@ -1,3 +1,13 @@
 require("jean.packer")
 require("jean.settings")
 require("jean.keymaps")
+
+require("jean.plugins.theme")
+require("jean.plugins.lualine")
+require("jean.plugins.treesitter")
+require("jean.plugins.telescope")
+require("jean.plugins.cmp")
+require("jean.plugins.lsp")
+require("jean.plugins.null-ls")
+require("jean.plugins.autopair")
+require("jean.plugins.autotag")

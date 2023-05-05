@@ -2,18 +2,47 @@ vim.cmd([[packadd packer.nvim]])
 
 return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
+
 	use({ "catppuccin/nvim", as = "catppuccin" }) -- colorizer
-	use({ "nvim-tree/nvim-web-devicons" }) -- web devicons
-	use({ "nvim-lua/plenary.nvim" }) -- plenary
+
 	use({ "goolord/alpha-nvim" }) -- dashboard
-	use({ "nvim-telescope/telescope.nvim" }) -- telescope
-	use({ "nvim-telescope/telescope-file-browser.nvim" }) -- file browser
+
+	use({
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.1",
+		requires = { { "nvim-lua/plenary.nvim" } },
+	})
+
+	use({
+		"nvim-telescope/telescope-file-browser.nvim",
+		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+	})
+
 	use({ "nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" } }) -- treesitter
+
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- null-ls
-	use({ "nvim-lualine/lualine.nvim" }) -- lualine
-	use({ "windwp/nvim-autopairs" }) -- autopairs
-	use({ "windwp/nvim-ts-autotag" }) -- autotag
-	use("github/copilot.vim") -- copilot
+
+	use({
+		"nvim-lualine/lualine.nvim",
+		requires = { "nvim-tree/nvim-web-devicons", opt = true },
+	})
+
+	use({
+		"windwp/nvim-autopairs",
+		config = function()
+			require("nvim-autopairs").setup({})
+		end,
+	})
+
+	use({
+		"windwp/nvim-ts-autotag",
+		config = function()
+			require("nvim-ts-autotag").setup({})
+		end,
+	})
+
+	use("github/copilot.vim")
+
 	use({
 		"VonHeikemen/lsp-zero.nvim",
 		branch = "v2.x",

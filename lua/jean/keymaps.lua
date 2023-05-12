@@ -50,3 +50,9 @@ keymap.set("", "sl", "<C-w>l")
 -- Telescope
 keymap.set("n", "<space>ff", ":Telescope find_files<cr>")
 keymap.set("n", "<space>fs", ":Telescope live_grep<cr>")
+
+-- Nvimtree open and close
+keymap.set("n", "<space>ee", ":NvimTreeToggle<cr>")
+
+-- Nvimtree open current file
+keymap.set("n", "<space>ef", ":NvimTreeFindFile<cr>")

@@ -1,5 +1,7 @@
 local status, cmp = pcall(require, "cmp")
+
 if not status then
+	print("Error loading cmp: " .. cmp)
 	return
 end
 

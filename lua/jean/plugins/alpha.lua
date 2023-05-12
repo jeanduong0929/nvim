@@ -1,7 +1,8 @@
+-- Import alpha and the dashboard theme from alpha
 local alpha = require("alpha")
 local dashboard = require("alpha.themes.dashboard")
 
--- Set header
+-- Configure dashboard header
 dashboard.section.header.val = {
 	"                                                     ",
 	"                                                     ",
@@ -20,7 +21,7 @@ dashboard.section.header.val = {
 	"                                                     ",
 }
 
--- Set menu
+-- Configure dashboard buttons
 dashboard.section.buttons.val = {
 	dashboard.button("e", "  > New file", ":ene <BAR> startinsert <CR>"),
 	dashboard.button("f", "  > Find file", ":Telescope find_files<CR>"),
@@ -29,10 +30,8 @@ dashboard.section.buttons.val = {
 	dashboard.button("q", " > Quit NVIM", ":qa<CR>"),
 }
 
--- Send config to alpha
+-- Apply the configuration to alpha
 alpha.setup(dashboard.opts)
 
--- Disable folding on alpha buffer
-vim.cmd([[
-    autocmd FileType alpha setlocal nofoldenable
-]])
+-- Disable folding for alpha buffers
+vim.cmd("autocmd FileType alpha setlocal nofoldenable")

@@ -1,25 +1,28 @@
+-- Safely import catppuccin
 local status, cat = pcall(require, "catppuccin")
+
 if not status then
+	print("Error loading catppuccino: " .. cat)
 	return
 end
 
+-- Configure catppuccin
 cat.setup({
-	flavour = "mocha", -- latte, frappe, macchiato, mocha
+	flavour = "mocha", -- Options: latte, frappe, macchiato, mocha
 	background = {
-		-- :h background
 		light = "latte",
 		dark = "mocha",
 	},
 	transparent_background = true,
-	show_end_of_buffer = false, -- show the '~' characters after the end of buffers
+	show_end_of_buffer = false, -- Hide '~' characters after the end of buffers
 	term_colors = false,
 	dim_inactive = {
 		enabled = false,
 		shade = "dark",
 		percentage = 0.15,
 	},
-	no_italic = false, -- Force no italic
-	no_bold = false, -- Force no bold
+	no_italic = false, -- Disable forced no italic
+	no_bold = false, -- Disable forced no bold
 	styles = {
 		comments = { "italic" },
 		conditionals = { "italic" },
@@ -34,5 +37,5 @@ cat.setup({
 	},
 })
 
--- setup must be called before loading
+-- Set colorscheme to catppuccin
 vim.cmd.colorscheme("catppuccin")

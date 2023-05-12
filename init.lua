@@ -1,16 +1,16 @@
-require("jean.packer")
-require("jean.settings")
-require("jean.keymaps")
+require "jean.packer"
+require "jean.settings"
+require "jean.keymaps"
 
-require("jean.plugins.alpha")
-require("jean.plugins.theme")
-require("jean.plugins.lualine")
-require("jean.plugins.treesitter")
-require("jean.plugins.telescope")
-require("jean.plugins.cmp")
-require("jean.plugins.lsp")
-require("jean.plugins.null-ls")
-require("jean.plugins.autopair")
-require("jean.plugins.autotag")
-require("jean.plugins.indent-line")
-require("jean.plugins.nvim-tree")
+require "jean.plugins.alpha"
+require "jean.plugins.theme"
+require "jean.plugins.lualine"
+require "jean.plugins.treesitter"
+require "jean.plugins.telescope"
+require "jean.plugins.cmp"
+require "jean.plugins.lsp"
+require "jean.plugins.null-ls"
+require "jean.plugins.autopair"
+require "jean.plugins.autotag"
+require "jean.plugins.indent-line"
+require "jean.plugins.nvim-tree"

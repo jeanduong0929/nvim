@@ -37,15 +37,15 @@ keymap.set("n", "B", "0")
 keymap.set("n", "<C-a>", "gg<S-v>G")
 
 -- Split window
-keymap.set("n", "ss", ":split<Return><C-w>w")
-keymap.set("n", "sv", ":vsplit<Return><C-w>w")
+keymap.set("n", "sb", ":split<Return><C-w>w")
+keymap.set("n", "sr", ":vsplit<Return><C-w>w")
 
 -- Move window
-keymap.set("n", "<Space>", "<C-w>w")
-keymap.set("", "sh", "<C-w>h")
-keymap.set("", "sk", "<C-w>k")
-keymap.set("", "sj", "<C-w>j")
-keymap.set("", "sl", "<C-w>l")
+keymap.set("n", "<space>", "<C-w>w")
+keymap.set("n", "<C-l>", ":NavigatorRight<CR>")
+keymap.set("n", "<C-h>", ":NavigatorLeft<CR>")
+keymap.set("n", "<C-k>", ":NavigatorUp<CR>")
+keymap.set("n", "<C-j>", ":NavigatorDown<CR>")
 
 -- Telescope
 keymap.set("n", "<space>ff", ":Telescope find_files<cr>")

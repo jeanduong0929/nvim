@@ -18,8 +18,8 @@ map("n", "K", "5k", opts)
 map("n", "df", "V$%", opts)
 map("n", "E", "$", opts)
 map("n", "B", "0", opts)
-map("n", "sr", "<cmd>vsplit<cr>", opts)
-map("n", "sb", "<cmd>split<cr>", opts)
+map("n", "sr", "<cmd>vsplit<cr><C-w>h:BufferLineCyclePrev<cr><C-w>l", opts)
+map("n", "sb", "<cmd>split<cr><C-w>k:BufferLineCyclePrev<cr><C-w>j", opts)
 map("n", "<tab>", "<cmd>BufferLineCycleNext<cr>", opts)
 
 -- VISUAL MODE

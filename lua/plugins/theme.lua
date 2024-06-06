@@ -1,11 +1,7 @@
 return {
-  "folke/tokyonight.nvim",
+  "ellisonleao/gruvbox.nvim",
   event = "VimEnter",
   config = function()
-    require("tokyonight").setup({
-      transparent = true,
-    })
-
-    vim.cmd.colorscheme("tokyonight-moon")
+    vim.cmd.colorscheme("gruvbox")
   end,
 }
